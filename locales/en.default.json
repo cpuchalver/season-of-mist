@@ -319,5 +319,26 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable"
     }
+  },
+  "carousel": {
+    "title": "Carousel",
+    "description": "A rotating banner showcasing featured products or content.",
+    "item": {
+      "title": "Item Title",
+      "description": "Description of the carousel item.",
+      "link": "Learn More"
+    },
+    "navigation": {
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "autoplay": {
+      "enabled": "Autoplay Enabled",
+      "disabled": "Autoplay Disabled"
+    }
+  },
+  "general": {
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again."
   }
 }

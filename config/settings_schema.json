@@ -2287,5 +2287,62 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Carousel Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Carousel Configuration"
+      },
+      {
+        "type": "text",
+        "id": "carousel_title",
+        "label": "Carousel Title",
+        "default": "Welcome to Our Store"
+      },
+      {
+        "type": "textarea",
+        "id": "carousel_description",
+        "label": "Carousel Description",
+        "default": "This is the best place to find amazing products."
+      },
+      {
+        "type": "image_picker",
+        "id": "carousel_image_1",
+        "label": "Carousel Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "carousel_image_2",
+        "label": "Carousel Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "carousel_image_3",
+        "label": "Carousel Image 3"
+      },
+      {
+        "type": "range",
+        "id": "carousel_speed",
+        "label": "Carousel Speed (ms)",
+        "default": 5000,
+        "min": 1000,
+        "max": 10000,
+        "step": 1000
+      },
+      {
+        "type": "checkbox",
+        "id": "show_navigation",
+        "label": "Show Navigation Arrows",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_dots",
+        "label": "Show Dots Navigation",
+        "default": true
+      }
+    ]
   }
 ]

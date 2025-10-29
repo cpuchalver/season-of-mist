@@ -86,6 +86,33 @@
         "padding-block-end": 72
       }
     },
+    "carousel": {
+      "type": "carousel",
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 5000,
+        "show_arrows": true,
+        "show_dots": true
+      },
+      "blocks": [
+        {
+          "type": "carousel_item",
+          "name": "Carousel Item",
+          "settings": {
+            "image": "",
+            "title": "",
+            "description": "",
+            "link": ""
+          }
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default",
+          "category": "Carousel"
+        }
+      ]
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {

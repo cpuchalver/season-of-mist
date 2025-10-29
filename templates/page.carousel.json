@@ -1,0 +1,37 @@
+{
+  "name": "Carousel Page",
+  "settings": [],
+  "sections": {
+    "carousel": {
+      "type": "carousel",
+      "settings": {
+        "title": "Featured Products",
+        "autoplay": true,
+        "autoplay_speed": 5000,
+        "show_arrows": true,
+        "show_dots": true
+      },
+      "blocks": [
+        {
+          "type": "carousel-item",
+          "name": "Carousel Item",
+          "settings": {
+            "image": "",
+            "title": "",
+            "description": "",
+            "link": ""
+          }
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default",
+          "category": "Carousel"
+        }
+      ]
+    }
+  },
+  "order": [
+    "carousel"
+  ]
+}

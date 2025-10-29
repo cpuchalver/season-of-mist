@@ -1,0 +1,8 @@
+<div class="carousel-item">
+  <img src="{{ item.image | img_url: 'medium' }}" alt="{{ item.alt_text }}" class="carousel-item__image">
+  <div class="carousel-item__content">
+    <h3 class="carousel-item__title">{{ item.title }}</h3>
+    <p class="carousel-item__description">{{ item.description }}</p>
+    <a href="{{ item.link }}" class="carousel-item__link">Learn More</a>
+  </div>
+</div>

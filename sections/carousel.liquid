@@ -1,0 +1,70 @@
+{% schema %}
+{
+  "name": "Carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Carousel Settings"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show",
+      "label": "Number of slides to show",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed (ms)",
+      "min": 1000,
+      "max": 10000,
+      "step": 1000,
+      "default": 3000
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="carousel">
+  <div class="carousel-inner">
+    {% for block in section.blocks %}
+      {% if block.type == 'carousel_item' %}
+        {% include 'carousel-item', item: block %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carouselElement = document.querySelector('.carousel');
+    const slidesToShow = {{ section.settings.slides_to_show }};
+    const autoplay = {{ section.settings.autoplay }};
+    const autoplaySpeed = {{ section.settings.autoplay_speed }};
+
+    // Initialize carousel functionality here
+  });
+</script>

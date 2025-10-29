@@ -632,5 +632,13 @@
         }
       }
     }
+  },
+  "carousel_settings": {
+    "autoplay": true,
+    "autoplay_speed": 3000,
+    "show_arrows": true,
+    "show_dots": true,
+    "slides_to_show": 1,
+    "slides_to_scroll": 1
   }
 }
