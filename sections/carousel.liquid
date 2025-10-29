@@ -31,6 +31,19 @@
       "default": 3000
     }
   ],
+  "blocks": [
+    {
+      "type": "carousel_item",
+      "name": "Carousel Item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "description", "label": "Description" },
+        { "type": "text", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "max_blocks": 10,
   "presets": [
     {
       "name": "Default",
@@ -40,31 +53,29 @@
 }
 {% endschema %}
 
-<div class="carousel">
+<div
+  class="carousel"
+  data-slides-to-show="{{ section.settings.slides_to_show }}"
+  data-autoplay="{{ section.settings.autoplay }}"
+  data-autoplay-speed="{{ section.settings.autoplay_speed }}"
+>
   <div class="carousel-inner">
     {% for block in section.blocks %}
       {% if block.type == 'carousel_item' %}
-        {% include 'carousel-item', item: block %}
+        {% render 'carousel-item', item: block.settings %}
       {% endif %}
     {% endfor %}
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+
+  <button class="carousel-control-prev" type="button" aria-label="{{ 'carousel.navigation.prev' | t }}">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" aria-label="{{ 'carousel.navigation.next' | t }}">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
   </button>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const carouselElement = document.querySelector('.carousel');
-    const slidesToShow = {{ section.settings.slides_to_show }};
-    const autoplay = {{ section.settings.autoplay }};
-    const autoplaySpeed = {{ section.settings.autoplay_speed }};
-
-    // Initialize carousel functionality here
-  });
-</script>
+{%- comment -%}
+  The actual JavaScript behaviour lives in `assets/carousel.js`.
+  This section only exposes settings to the DOM via data-attributes.
+{%- endcomment -%}

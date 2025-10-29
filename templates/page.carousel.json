@@ -13,7 +13,7 @@
       },
       "blocks": [
         {
-          "type": "carousel-item",
+          "type": "carousel_item",
           "name": "Carousel Item",
           "settings": {
             "image": "",
