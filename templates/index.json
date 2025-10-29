@@ -72,7 +72,7 @@
         "icons_style": "chevron_large",
         "slideshow_controls_style": "dots",
         "color_scheme": "",
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 4,
         "section_width": "full-width",
         "slide_height": "large",
